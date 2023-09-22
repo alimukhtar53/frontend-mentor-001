@@ -1,22 +1,26 @@
-import Image from "next/image";
-import qrImage from "./images/image-qr-code.png";
+"use client";
+import React, { useEffect } from "react";
+import ColorPalette from "./components/ColorPalette";
+import QrcodeCard from "./components/QrcodeCard";
+
+const COLORS = ["orange", "sky", "lime", "indigo", "yellow", "slate", "rose"];
 
 export default function Home() {
+  const [currentColor, setCurrentColor] = React.useState("slate");
+
+  const handleChangeColor = (index: number) => {
+    setCurrentColor(COLORS[index]);
+  };
+
+  useEffect(() => {
+    console.log(currentColor);
+  }, [currentColor]);
+
   return (
     <div className="h-full m-auto w-100 flex justify-center items-center bg-[#D5E1EF] shadow-2xl">
-      <div className="bg-white p-4 rounded-[20px] w-min">
-        <div className="rounded-xl overflow-clip w-[296px] h-[296px]">
-          <Image src={qrImage} alt="qr-image" />
-        </div>
-        <div className="my-8">
-          <h1 className="text-2xl font-bold text-center text-slate-800">
-            Improve your front-end skills by building projects
-          </h1>
-          <p className="text-center text-neutral-500 font-semibold mt-4 leading-5">
-            Scan the QR code to visit Frontend Mentor and take your coding
-            skills to the next level
-          </p>
-        </div>
+      <div className="flex flex-col">
+        <QrcodeCard currentColor={currentColor} />
+        <ColorPalette handleChangeColor={handleChangeColor} />
       </div>
     </div>
   );
