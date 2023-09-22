@@ -6,21 +6,22 @@ import QrcodeCard from "./components/QrcodeCard";
 const COLORS = ["orange", "sky", "lime", "indigo", "yellow", "slate", "rose"];
 
 export default function Home() {
-  const [currentColor, setCurrentColor] = React.useState("slate");
+  const [currentColor, setCurrentColor] = React.useState("indigo");
 
   const handleChangeColor = (index: number) => {
     setCurrentColor(COLORS[index]);
   };
 
-  useEffect(() => {
-    console.log(currentColor);
-  }, [currentColor]);
+  useEffect(() => {}, [currentColor]);
 
   return (
     <div className="h-full m-auto w-100 flex justify-center items-center bg-[#D5E1EF] shadow-2xl">
       <div className="flex flex-col">
         <QrcodeCard currentColor={currentColor} />
-        <ColorPalette handleChangeColor={handleChangeColor} />
+        <ColorPalette
+          currentColor={currentColor}
+          handleChangeColor={handleChangeColor}
+        />
       </div>
     </div>
   );

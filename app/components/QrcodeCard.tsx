@@ -31,8 +31,8 @@ function QrcodeCard({ currentColor }: any) {
               Ali Mukhtar
             </span>
             , your friendly {getTotalExperience()}-year UI/UX and frontend
-            enthusiast! Scan the QR code, let&apos;s join the fun on LinkedIn.
-            🚀
+            enthusiast! Scan the QR code, and let&apos;s join the fun on
+            LinkedIn. 🚀
           </p>
         </div>
       </div>

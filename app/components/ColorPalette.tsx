@@ -5,11 +5,13 @@ type ChangeColorFunction = (index: number) => void;
 
 const ColorPalette = ({
   handleChangeColor,
+  currentColor,
 }: {
   handleChangeColor: ChangeColorFunction;
+  currentColor: string;
 }) => {
   const [activeColorIndex, setActiveColorIndex] = useState<number>(
-    COLORS.indexOf("slate")
+    COLORS.indexOf(currentColor)
   );
 
   const handleColorClick = (index: number) => {
