@@ -9,7 +9,7 @@ function QrcodeCard({ currentColor }: any) {
     <>
       <div className="bg-white p-4 rounded-[20px] w-min shadow-sm">
         <div
-          className={`bg-${currentColor}-300 transition-all isolate relative flex justify-center items-center rounded-xl overflow-clip w-[306px] h-[306px]`}
+          className={`bg-${currentColor}-300 transition-all isolate relative flex justify-center items-center rounded-xl overflow-hidden w-[306px] h-[306px]`}
         >
           <Image className="z-10" src={qrImage} alt="qr-image" width={200} />
           <div
