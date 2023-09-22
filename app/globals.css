@@ -91,3 +91,16 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+@keyframes circularMotion {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.my-animation {
+  animation: circularMotion 55s linear infinite;
+}
