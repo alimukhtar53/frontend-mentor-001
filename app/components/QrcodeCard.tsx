@@ -7,7 +7,7 @@ import { getTotalExperience } from "../lib/totalExperience";
 function QrcodeCard({ currentColor }: any) {
   return (
     <>
-      <div className="bg-white p-4 rounded-[20px] w-min">
+      <div className="bg-white p-4 rounded-[20px] w-min shadow-sm">
         <div
           className={`bg-${currentColor}-300 transition-all isolate relative flex justify-center items-center rounded-xl overflow-clip w-[306px] h-[306px]`}
         >

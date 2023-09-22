@@ -15,8 +15,8 @@ export default function Home() {
   useEffect(() => {}, [currentColor]);
 
   return (
-    <div className="h-full m-auto w-100 flex justify-center items-center bg-[#D5E1EF] shadow-2xl">
-      <div className="flex flex-col">
+    <div className="h-screen w-screen flex justify-center items-center ">
+      <div className="flex flex-col pt-20 pb-8">
         <QrcodeCard currentColor={currentColor} />
         <ColorPalette
           currentColor={currentColor}
